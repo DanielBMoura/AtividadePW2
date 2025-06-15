@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <%- include('../partials/head') %>
+</head>
+<body class="container">
+    <header>
+        <%- include('../partials/header') %>
+    </header>
+    <main>
+        <div class="jumbotron">
+            <h1>Campeonato Brasileiro</h1>
+        </div>
+        <h2>Times</h2>
+        <table class="table table-bordered">
+            <th>
+                Nome
+            </th>
+            <th>
+                Cidade de Origem
+            </th>
+            <th>
+                Quantidade de títulos
+            </th>
+            <tbody>
+                <% times.forEach(function(times) { %>
+                    <tr>
+                        <td><%= times.nome %></td>
+                        <td><%= times.cidade %></td>
+                        <td><%= times.QTDtitulos %></td>
+                    </tr>
+                <% }) %>
+            </tbody>
+        </table>
+        <%- include('../partials/footer') %>
+    </main>
+</body>
+</html>
